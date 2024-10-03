@@ -14,10 +14,12 @@ jobs:
 
     steps:
     - name: step1
-      run: echo 'Hello world'
+      run: |
+        echo "MY_ENV_VAR=myValue" >> $GITHUB_ENV
+        echo 'Hello world'
 
     - name: step2
-      run: echo 'Hello world again'
+      run: echo 'Hello $MY_ENV_VAR world again'
 
     - name: printsecret1
       run: echo ${{ secrets.secret1 }}
