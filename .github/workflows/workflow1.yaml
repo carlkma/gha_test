@@ -1,8 +1,12 @@
+name: Workflow 1 Hello World
 on:
   schedule:
     - cron: '0 1 * * 3'
+  push:
+    branches:
+      - main
   workflow_dispatch:
-
+  
 jobs:
   job1:
     runs-on: ubuntu-latest
