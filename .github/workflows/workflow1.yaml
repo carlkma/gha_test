@@ -19,7 +19,7 @@ jobs:
         echo 'Hello world'
 
     - name: step2
-      run: echo 'Hello $MY_ENV_VAR world again'
+      run: echo "Hello $MY_ENV_VAR world again"
 
     - name: printsecret1
       run: echo ${{ secrets.secret1 }}
