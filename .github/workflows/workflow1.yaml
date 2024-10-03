@@ -9,6 +9,7 @@ on:
   
 jobs:
   job1:
+    environment: int
     runs-on: ubuntu-latest
 
     steps:
@@ -17,3 +18,10 @@ jobs:
 
     - name: step2
       run: echo 'Hello world again'
+
+    - name: printsecret1
+      run: echo ${{ secrets.secret1 }}
+
+    - name: printvar1
+      run: echo ${{ vars.int_var_1 }}
+      
